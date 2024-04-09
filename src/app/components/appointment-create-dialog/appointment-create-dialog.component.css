@@ -1,0 +1,20 @@
+.holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input {
+  width: 80%;
+}

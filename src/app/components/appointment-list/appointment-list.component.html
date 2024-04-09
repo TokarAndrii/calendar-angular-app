@@ -1,0 +1,12 @@
+<div *ngIf="appointments.length > 0; else noAppointments">
+    <p>Your Appointments:</p>
+    <ul>
+        <li *ngFor="let appointment of appointments">
+            {{ appointment.title }} - {{ appointment.date }} - {{ appointment.description }}
+            <button (click)="deleteAppointment(appointment.id)" mat-raised-button>Delete appointment</button>
+        </li>
+    </ul>
+</div>
+<ng-template #noAppointments>
+    <p>No appointments yet</p>
+</ng-template>

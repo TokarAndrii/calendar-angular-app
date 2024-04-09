@@ -1,0 +1,13 @@
+<div class='holder'>
+    <h3>appointment-create-dialog works!</h3>
+    <form class='form' [formGroup]="appointmentCreateForm" (ngSubmit)="createAppointment()">
+        <mat-form-field class='input'>
+            <mat-label>Title</mat-label>
+            <input matInput type="text" formControlName="title" placeholder="enter title">
+        </mat-form-field>
+        <mat-form-field class='input'>
+            <textarea matInput formControlName="description" placeholder="Description" required></textarea>
+        </mat-form-field>
+        <button mat-raised-button>Save appointment</button>
+    </form>
+</div>

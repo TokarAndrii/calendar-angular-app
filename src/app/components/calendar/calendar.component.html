@@ -1,0 +1,11 @@
+<div class='holder'>
+    <h3>Your Calendar</h3>
+    <button (click)="openAppointmentDialog()" class='addAppoinment' mat-button color="primary">+ Add appoinment</button>
+    <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" (dateChange)="onDateSelected($event)">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <app-appointment-list [selectedDate]="selectedDate"></app-appointment-list>
+</div>
